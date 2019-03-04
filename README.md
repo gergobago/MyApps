@@ -6,3 +6,7 @@
 
 ## Osztály neve: Fruit1
 # Adattagok: nev:string szarmazasihely:string mennyiseg:int
+
+#Különleges metódus az osztályon belül: Konstruktor
+
+public Fruit1(string anev, aszarmazasihely, amenny)

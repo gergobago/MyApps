@@ -12,7 +12,18 @@ namespace MyFirstApp
        public string nev;
        public string szarmazasihely;
        public int mennyiseg;
-       public string gyumolcs;
        
+       
+
+
+
+        //Konstruktor: minden objektum lehozásakor lefut
+        public Fruit1(string anev, string aSzarmazasihely, int aMenny)
+        {
+            nev = anev;
+            szarmazasihely = aSzarmazasihely;
+            mennyiseg = aMenny;
+        }
+
     }
 }
