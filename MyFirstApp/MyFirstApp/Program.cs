@@ -12,11 +12,16 @@ namespace MyFirstApp
 
         static void Main(string[] args)
         {
-            Fruit1[] Fruits = new Fruit1[15];
+            //Fruit1[] Fruits = new Fruit1[15];
+
+            var fruits = new List<Fruit1>();
+
             string nev;
             string szarmazasihely;
             int mennyiseg;
             int gyumolcs;
+            int osszmenny = 0;
+
 
             Console.Write("Kérem a gyümölcsök számát: ");
             gyumolcs = int.Parse(Console.ReadLine());
@@ -31,27 +36,31 @@ namespace MyFirstApp
                 Console.Write("Kérem a(z) {0}. Gyümölcs mennyiségét: ", i + 1);
                 mennyiseg = int.Parse(Console.ReadLine());
 
+                osszmenny += mennyiseg;
 
 
 
-                Fruits[i] = new Fruit1(nev, szarmazasihely, mennyiseg);
+                //Fruits[i] = new Fruit1(nev, szarmazasihely, mennyiseg);
+                fruits.Add(new Fruit1(nev, szarmazasihely, mennyiseg));
 
-               
-                Fruits[i].nev = nev;
-                Fruits[i].szarmazasihely = szarmazasihely;
-                Fruits[i].mennyiseg = mennyiseg;
+                Console.WriteLine("Gyümölcsök összes mennyisége: " + osszmenny);
+
+
+                fruits[i].nev = nev;
+                fruits[i].szarmazasihely = szarmazasihely;
+                fruits[i].mennyiseg = mennyiseg;
 
             }
             Console.WriteLine("A gyümölcsös tartalma: ");
             for (int i = 0; i < gyumolcs; i++)
             {
-                Console.WriteLine(Fruits[i].nev);
-                Console.WriteLine(Fruits[i].szarmazasihely);
-                Console.WriteLine(Fruits[i].mennyiseg);
-
-
+                Console.WriteLine(fruits[i].nev);
+                Console.WriteLine(fruits[i].szarmazasihely);
+                Console.WriteLine(fruits[i].mennyiseg);
 
                 Console.ReadKey();
+
+          
 
 
             }

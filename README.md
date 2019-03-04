@@ -10,3 +10,7 @@
 #Különleges metódus az osztályon belül: Konstruktor
 
 public Fruit1(string anev, aszarmazasihely, amenny)
+{
+
+}
+#Feladat: Számoljuk ki a felvitt gyumölcsök számát

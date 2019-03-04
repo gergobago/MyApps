@@ -23,6 +23,7 @@ namespace MyFirstApp
             nev = anev;
             szarmazasihely = aSzarmazasihely;
             mennyiseg = aMenny;
+            Console.WriteLine("DEBUG: Fruit() konstruktor meghívás");
         }
 
     }
