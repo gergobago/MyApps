@@ -12,7 +12,7 @@ namespace MyFirstApp
        public string nev;
        public string szarmazasihely;
        public int mennyiseg;
-        string gyumolcs;
+       public string gyumolcs;
        
     }
 }
