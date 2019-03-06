@@ -15,7 +15,7 @@ namespace kpo1._0
             string compChoice = "";
             string playerChoice = "";
 
-            int copmScore = 0;
+            int compScore = 0;
             int playerScore = 0;
 
             Random r = new Random();
@@ -71,10 +71,32 @@ namespace kpo1._0
                         compChoice = "olló";
                         break;
                 }
+                ///Feladat 5: Értékeljük ki  a compChoice és a playerChoice
+                ///változókat
+                ///
+                if (
+                    (playerChoice == "kő" && compChoice == "papír") ||
+                    (playerChoice == "papír" && compChoice == "olló") ||
+                    (playerChoice == "olló" && compChoice == "kő")
+                    )
+                {
+                    Console.WriteLine("Számítógép: " + compChoice + " Te: " + playerChoice);
+                    Console.WriteLine("Veszítettél! Állás: Szg: {0} Játékos: {1}", ++compScore, playerScore);
+                }
+                else if (playerChoice == compChoice)
+                {
+                    Console.WriteLine("Számítógép: " + compChoice + " Te: " + playerChoice);
+                    Console.WriteLine("Döntetlen! Állás: Szg: {0} Játékos: {1}", compScore, playerScore);
+                }
+                else
+                {
+                    Console.WriteLine("Számítógép: " + compChoice + " Te: " + playerChoice);
+                    Console.WriteLine("Nyertél! Állás: Szg: {0} Játékos: {1}", compScore, ++playerScore);
+                }
 
 
 
-                        Console.Write("Akarsz még játszani? i/n");
+                    Console.WriteLine("Akarsz még játszani? i/n");
                         if (Console.ReadKey(true).KeyChar == 'n')
                         {
                             moreGame = false;
