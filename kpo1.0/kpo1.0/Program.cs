@@ -18,6 +18,9 @@ namespace kpo1._0
             int copmScore = 0;
             int playerScore = 0;
 
+            Random r = new Random();
+
+
             ///
             ///Program: Kő papír olló játék leprogramozása
             ///Írta: Bagó Gergő / 2019.03.06.
@@ -38,7 +41,7 @@ namespace kpo1._0
             {
                 ///Feladat 3:
                 ///Player választásának megkérdezése és tárolása
-                ///n
+                ///
                 Console.Write("Mit választasz? k/p/o ");
                 switch (Console.ReadKey(true).KeyChar)
 
@@ -53,22 +56,36 @@ namespace kpo1._0
                         playerChoice = "olló";
                         break;
                 }
-                
-
-
-
-                Console.Write("Akarsz még játszani? i/n");
-                if (Console.ReadKey(true).KeyChar == 'n')
+                ///Feladat 4
+                ///Számítógép választásának kérdése: Random()
+                ///
+                switch (r.Next(0, 3))
                 {
-                    moreGame = false;
+                    case '0':
+                        compChoice = "kő";
+                        break;
+                    case '1':
+                        compChoice = "papír";
+                        break;
+                    case '2':
+                        compChoice = "olló";
+                        break;
                 }
 
-            } while (moreGame);
 
 
-            Console.ReadKey();
+                        Console.Write("Akarsz még játszani? i/n");
+                        if (Console.ReadKey(true).KeyChar == 'n')
+                        {
+                            moreGame = false;
+                        }
 
-             
+                } while (moreGame) ;
+
+
+                
+
+              
         }
     }
 }
