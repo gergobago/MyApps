@@ -13,7 +13,7 @@ namespace kpo1._0
             ///2.Feladat
             ///Változók létrehozása
             string compChoice = "";
-            string palyerChoice = "";
+            string playerChoice = "";
 
             int copmScore = 0;
             int playerScore = 0;
@@ -28,12 +28,34 @@ namespace kpo1._0
             ///Ciklus: Amíg a játékos szeretne játszani
             bool moreGame = true;
 
+
+
            
 
             Console.WriteLine("**********Kő/Papír/Olló**********");
 
             do
             {
+                ///Feladat 3:
+                ///Player választásának megkérdezése és tárolása
+                ///n
+                Console.Write("Mit választasz? k/p/o ");
+                switch (Console.ReadKey(true).KeyChar)
+
+                {
+                    case 'k':
+                        playerChoice = "kő";
+                        break;
+                    case 'p':
+                        playerChoice = "papír";
+                        break;
+                    case 'o':
+                        playerChoice = "olló";
+                        break;
+                }
+                
+
+
 
                 Console.Write("Akarsz még játszani? i/n");
                 if (Console.ReadKey(true).KeyChar == 'n')
