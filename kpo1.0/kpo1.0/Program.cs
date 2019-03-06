@@ -10,6 +10,14 @@ namespace kpo1._0
     {
         static void Main(string[] args)
         {
+            ///2.Feladat
+            ///Változók létrehozása
+            string compChoice = "";
+            string palyerChoice = "";
+
+            int copmScore = 0;
+            int playerScore = 0;
+
             ///
             ///Program: Kő papír olló játék leprogramozása
             ///Írta: Bagó Gergő / 2019.03.06.
@@ -19,6 +27,8 @@ namespace kpo1._0
             ///1.Feladat
             ///Ciklus: Amíg a játékos szeretne játszani
             bool moreGame = true;
+
+           
 
             Console.WriteLine("**********Kő/Papír/Olló**********");
 
