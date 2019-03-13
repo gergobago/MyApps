@@ -11,7 +11,7 @@ namespace esf
         static void Main(string[] args)
         {
             int v = 0;
-
+            string  s;
 
 
             //A létrehozott  új típussal inicializálunk egy objektumot
@@ -82,6 +82,12 @@ namespace esf
 
             }
 
+            //Beolvasás konzolról
+              s = Console.ReadLine();
+            Console.WriteLine("Beolvasás konzolról:" + s);
+
+
+      
             //Beolvas egy karaktert a konzolról
             Console.ReadKey();
 
