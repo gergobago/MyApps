@@ -14,3 +14,8 @@ public Fruit1(string anev, aszarmazasihely, amenny)
 
 }
 #Feladat: Számoljuk ki a felvitt gyumölcsök számát
+
+
+
+###Ismétlés
+Osztály létrehozása egy string adattaggal
