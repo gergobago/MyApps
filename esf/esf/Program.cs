@@ -137,21 +137,21 @@ namespace esf
 
             do
             {
-                Console.WriteLine("--------------------------");
+                Console.WriteLine("----------------------------------------------------------------------------------------------------");
                 Console.WriteLine("Válassz az u(Új könyv) /t(Egyik könyv törlése) /l(Könyvek kilistázása) /k(Könyvtár bezárása) közül: ");
-                Console.WriteLine("--------------------------");
+                Console.WriteLine("----------------------------------------------------------------------------------------------------");
 
 
                 switch (Console.ReadKey(true).KeyChar)
                 {
                     case 'u':
-                        Console.WriteLine("Kérem a könyv címét: ");
+                        Console.Write("Kérem a könyv címét: ");
                         sName = Console.ReadLine();
 
-                        Console.WriteLine("Kérem a könyv szerzőjét: ");
+                        Console.Write("Kérem a könyv szerzőjét: ");
                         sAuthor = Console.ReadLine();
 
-                        Console.WriteLine("Kérem a könyv lapszámát: ");
+                        Console.Write("Kérem a könyv lapszámát: ");
                         iPage = int.Parse(Console.ReadLine());
                         Lista.Add(new Book { Name = sName, Author = sAuthor, Page = iPage });
                         break;
@@ -159,16 +159,17 @@ namespace esf
                         moreBook = false;
                         break;
                     case 't':
-                        Console.WriteLine("Kérem a könyv címét: ");
+                        Console.Write("Kérem a könyv címét: ");
                         sName = Console.ReadLine();
 
                         Lista.Remove(Lista.Find(x => x.Name.Contains(sName)));
                         break;
                     case 'l':
                         Console.WriteLine("Könyvtár tartalma: ");
+                        
                         foreach (Book book in Lista)
                         {
-                            Console.WriteLine(book.Name + " " + book.Author + " " + book.Page);
+                            Console.WriteLine("->" + book.Name + " " + book.Author + " " + book.Page);
                         }
                         break;
 
