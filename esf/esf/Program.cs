@@ -126,19 +126,74 @@ namespace esf
                 Console.WriteLine(book.Name + " " + book.Author + " " + book.Page);
             }
 
+            //Feladat: Egészítsük ki a programot úgy hogy a felhasználó engedélyt kap arra hogy kiválassza a 'u','t','l' közül
+            bool moreBook = true;
+            string sName;
+            String sAuthor;
+            int iPage;
 
+            Console.WriteLine("Üdvözöllek a könyvtáramban");
+
+
+            do
+            {
+                Console.WriteLine("--------------------------");
+                Console.WriteLine("Válassz az u(Új könyv) /t(Egyik könyv törlése) /l(Könyvek kilistázása) /k(Könyvtár bezárása) közül: ");
+                Console.WriteLine("--------------------------");
+
+
+                switch (Console.ReadKey(true).KeyChar)
+                {
+                    case 'u':
+                        Console.WriteLine("Kérem a könyv címét: ");
+                        sName = Console.ReadLine();
+
+                        Console.WriteLine("Kérem a könyv szerzőjét: ");
+                        sAuthor = Console.ReadLine();
+
+                        Console.WriteLine("Kérem a könyv lapszámát: ");
+                        iPage = int.Parse(Console.ReadLine());
+                        Lista.Add(new Book { Name = sName, Author = sAuthor, Page = iPage });
+                        break;
+                    case 'k':
+                        moreBook = false;
+                        break;
+                    case 't':
+                        Console.WriteLine("Kérem a könyv címét: ");
+                        sName = Console.ReadLine();
+
+                        Lista.Remove(Lista.Find(x => x.Name.Contains(sName)));
+                        break;
+                    case 'l':
+                        Console.WriteLine("Könyvtár tartalma: ");
+                        foreach (Book book in Lista)
+                        {
+                            Console.WriteLine(book.Name + " " + book.Author + " " + book.Page);
+                        }
+                        break;
+
+                } 
+
+
+
+
+
+
+            }while(moreBook) ;
+
+            
             //Console.WriteLine("Keressük az Oroszlánkölykök könyvet:" + Lista.Find(x => x.Name.Contains("Oroszlánkölykök")).Name);
 
             //Beolvasás konzolról
-            s = Console.ReadLine();
-            Console.WriteLine("Beolvasás konzolról:" + s);
+            // s = Console.ReadLine();
+            //Console.WriteLine("Beolvasás konzolról:" + s);
 
 
-      
+
             //Beolvas egy karaktert a konzolról
-            Console.ReadKey();
+            //Console.ReadKey();
 
-            
+
         }
     }
 }
