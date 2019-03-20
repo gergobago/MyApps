@@ -101,6 +101,33 @@ namespace esf
 
             //Típusos listák
             //Lista elem
+            List<Book> Lista = new List<Book>();
+
+            //Új elemek hozzáadása a listához
+            //Ctrl-'.' hívhatjuk segítségül
+            Lista.Add(new Book() { Name = "Oroszlánkölykök", Author = "IrwinShaw", Page = 100 });
+            Lista.Add(new Book() { Name = "Megkergetve", Author = "Margó István", Page = 200 });
+            Lista.Add(new Book() { Name = "Egri csillagok", Author = "Gárdonyi Géza", Page = 1200 });
+
+            
+            //Lista kiiratása
+            foreach  (Book book in Lista)
+            {
+                Console.WriteLine(book.Name + " " + book.Author + " " + book.Page);
+            }
+
+            //Lista egy elemének törlése
+            Lista.Remove(Lista.Find(x => x.Name.Contains("Megkergetve")));
+            Lista.Remove(Lista.Find(x => x.Name.Contains("Oroszlánkölykök")));
+
+            Console.WriteLine("******************************************************************");
+            foreach (Book book in Lista)
+            {
+                Console.WriteLine(book.Name + " " + book.Author + " " + book.Page);
+            }
+
+
+            //Console.WriteLine("Keressük az Oroszlánkölykök könyvet:" + Lista.Find(x => x.Name.Contains("Oroszlánkölykök")).Name);
 
             //Beolvasás konzolról
             s = Console.ReadLine();

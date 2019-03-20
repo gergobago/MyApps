@@ -9,7 +9,7 @@ namespace esf
     class Exercise
     {
         /// <summary>
-        /// Adattagok létrehozása: public, private, preotected
+        /// Adattagok létrehozása: public, private, protected
         /// Public : nyilvános elérés
         /// Private : csak az osztály számára látszik
         /// </summary>
