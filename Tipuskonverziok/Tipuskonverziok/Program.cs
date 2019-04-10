@@ -93,7 +93,14 @@ namespace Tipuskonverziok
                 Console.Write(iArr[i] + " ");
             }
 
+            //TöbbDimenziós Tömb
 
+            int[,] matrix = new int[,]
+                {
+                    {12, 23, 2},
+                    {13, 67, 52},
+                    {45, 55, 1},
+                };
 
             Console.ReadKey();
         }
