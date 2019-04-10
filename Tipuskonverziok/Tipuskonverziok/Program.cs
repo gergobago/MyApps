@@ -44,6 +44,38 @@ namespace Tipuskonverziok
                 Console.Write(ch + "->" + (int)ch + " ");
             }
 
+            //Tömbök
+            int iPrev = 0;
+            int[] iTomb = new int[10];
+            Random r = new Random();
+            for (int i = 0; i < iTomb.Length; i++)
+            {
+                //konzolról kérje be a számot
+                Console.WriteLine();
+                Console.Write("Kérem a {0}. számot: ", i);
+                try
+                {
+                    iTomb[i] = int.Parse(Console.ReadLine());
+                    iPrev = i;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Hiba." + e.Message);
+                    i = iPrev;
+                }
+
+               // iTomb[i] = r.Next();
+            }
+
+            Console.WriteLine();
+            //Kiiratni az iTomb elemeit
+            for (int i = 0; i < iTomb.Length; i++)
+            {
+                Console.Write(iTomb[i] + " ");
+            }
+           
+        
+
             Console.ReadKey();
         }
     }
