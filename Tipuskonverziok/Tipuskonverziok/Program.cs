@@ -24,8 +24,8 @@ namespace Tipuskonverziok
             object a = "123";
             object b = "Hello";
             object c = 10;
-
             string aa = a as string;
+            //expr1 ? v1 : v2;
             Console.WriteLine(aa == null ? "NULL" : aa); // 123 
 
             string bb = b as string;
@@ -34,7 +34,9 @@ namespace Tipuskonverziok
             string cc = c as string;
             Console.WriteLine(cc == null ? "NULL" : cc); // NULL 
 
-
+            //expr1 ? v1 : v2;
+            int f = 10;
+            Console.WriteLine(x == 5 ? "f==5":"f != 5");
 
 
             Console.ReadKey();
