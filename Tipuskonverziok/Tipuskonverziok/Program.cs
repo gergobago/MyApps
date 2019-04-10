@@ -38,6 +38,11 @@ namespace Tipuskonverziok
             int f = 10;
             Console.WriteLine(x == 5 ? "f==5":"f != 5");
 
+            //Karakter konverziók
+            for (char ch = 'a'; ch <= 'z'; ++ch)
+            {
+                Console.Write(ch + "->" + (int)ch + " ");
+            }
 
             Console.ReadKey();
         }
