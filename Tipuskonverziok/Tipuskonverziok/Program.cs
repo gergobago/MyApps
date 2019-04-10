@@ -46,7 +46,7 @@ namespace Tipuskonverziok
 
             //Tömbök
             int iPrev = 0;
-            int[] iTomb = new int[10];
+            int[] iTomb = new int[3];
             Random r = new Random();
             for (int i = 0; i < iTomb.Length; i++)
             {
@@ -73,8 +73,27 @@ namespace Tipuskonverziok
             {
                 Console.Write(iTomb[i] + " ");
             }
-           
-        
+
+            //Tömb kezdeti értékeinek megadása int[]; string[]
+            int[] iArr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            string[] sArr = new string[] { "alma", "banán", "körte", "mangó" };
+
+
+            Array.Sort(sArr);
+            //Kiiratni az sArr elemeit
+            for (int i = 0; i < sArr.Length; i++)
+            {
+                Console.Write(sArr[i] + " ");
+            }
+
+            Array.Sort(iArr);
+            //Kiiratni az iArr elemeit
+            for (int i = 0; i < iArr.Length; i++)
+            {
+                Console.Write(iArr[i] + " ");
+            }
+
+
 
             Console.ReadKey();
         }
