@@ -12,8 +12,8 @@ namespace Villamos
         {
             int U = 0 ;
             int I = 0 ;
-            int R = U * I;
-            double kW = R * 0.001 ;
+            int P = U * I;
+            double kW = P * 0.001 ;
             double mW = kW * 0.001;
 
 
@@ -26,21 +26,21 @@ namespace Villamos
             I = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            R=U*I;
+            P=U*I;
 
-            Console.WriteLine("A teljesítmény (R) értéke: ");
-            Console.Write(R);
+            Console.WriteLine("A teljesítmény (P) értéke: ");
+            Console.Write(P);
             Console.WriteLine();
 
-            kW=R*0.001;
+            kW=P*0.001;
 
-            Console.WriteLine("A teljesítmény (R) értéke kW-ban: ");
+            Console.WriteLine("A teljesítmény (P) értéke kW-ban: ");
             Console.Write(kW);
             Console.WriteLine();
 
             mW=kW*0.001;
 
-            Console.WriteLine("A teljesítmény (R) értéke mW-ban: ");
+            Console.WriteLine("A teljesítmény (P) értéke mW-ban: ");
             Console.Write(mW);
             Console.WriteLine();
 
